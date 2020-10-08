@@ -1,0 +1,132 @@
+body {
+  background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+}
+.chat-block {
+  background-image: url(img/image.png);
+  background-repeat: no-repeat;
+  max-width: 651px;
+  margin: 0 auto;
+}
+.message-flow {
+  max-height: 517px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-bottom: 2px solid #dbdbdb;
+}
+.message-input-block {
+  max-height: 240px;
+  padding: 20px 40px 30px 20px;
+}
+.message {
+  display: flex;
+  margin-bottom: 20px;
+}
+.message--incoming {
+  flex-direction: row;
+}
+.message--outgoing {
+  flex-direction: row-reverse;
+}
+
+.message__photo {
+  background: url(img/photo.png);
+  background-repeat: no-repeat;
+  min-width: 47px;
+  min-height: 47px;
+}
+.message--incoming .message__photo {
+  margin: 0px 18px 0px 15px;
+}
+.message--outgoing .message__photo {
+  margin: 0px 21px 0px 18px;
+}
+
+.message__text {
+  background-color: #f1f3f5;
+  border-radius: 5px;
+  padding: 10px 15px 10px 15px;
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.message--incoming .message__text::before {
+  left: -9px;
+}
+.message--incoming .message__text {
+  margin-right: 87px;
+}
+.message--outgoing .message__text {
+  margin-left: 77px;
+}
+
+.message--outgoing .message__text::after {
+  right: -9px;
+}
+
+.message--outgoing .message__text::after,
+.message--incoming .message__text::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+  border-color: #f1f3f5 transparent #f1f3f5 transparent;
+  position: absolute;
+  top: 7px;
+}
+
+.textarea {
+  font-family: "Noto Sans", arial;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #696969;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  resize: none;
+  overflow: auto;
+  margin-bottom: 17px;
+  border-radius: 4px;
+  outline: none;
+  max-height: 129px;
+}
+
+.button {
+  padding: 0;
+  border: none;
+  width: 144px;
+  height: 41px;
+  background: #0f54b9;
+  color: #ffffff;
+  border-radius: 21px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.date-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 2px;
+  margin-bottom: 22px;
+}
+.date-block__title {
+  width: 150px;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+}
+
+.date-block::before,
+.date-block::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid #dbdbdb;
+  margin-bottom: 7px;
+}
